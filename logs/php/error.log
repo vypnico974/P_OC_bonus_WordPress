@@ -1,0 +1,72 @@
+[13-Jul-2023 11:26:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function wpforms() in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\panel\classes\importers\class-wpforms-importer.php:59
+Stack trace:
+#0 C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\panel\classes\importers\class-wpforms-importer.php(34): OWP_WPForms_Importer->import_json(Array)
+#1 C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\panel\demos.php(1390): OWP_WPForms_Importer->process_import_file('https://demos.o...')
+#2 C:\Users\HP\Local Sites\bananasite\app\public\wp-includes\class-wp-hook.php(308): OceanWP_Demos::ajax_import_forms('')
+#3 C:\Users\HP\Local Sites\bananasite\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 C:\Users\HP\Local Sites\bananasite\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#5 C:\Users\HP\Local Sites\bananasite\app\public\wp-admin\admin-ajax.php(188): do_action('wp_ajax_owp_aja...')
+#6 {main}
+  thrown in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\panel\classes\importers\class-wpforms-importer.php on line 59
+[13-Jul-2023 11:30:06 UTC] WordPress database error Table 'wp_e_events' already exists for query CREATE TABLE `wp_e_events` (
+			id bigint(20) unsigned auto_increment primary key,
+			event_data text null,
+			created_at datetime not null
+		) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci; made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Elementor\Plugin->init, Elementor\Plugin->init_components, Elementor\Core\Admin\Admin->__construct, Elementor\Plugin->init_common, Elementor\Core\Common\App->init_components, Elementor\Core\Common\Modules\EventTracker\Module->__construct, Elementor\Core\Common\Modules\EventTracker\DB->__construct, Elementor\Core\Common\Modules\EventTracker\DB->create_table
+[13-Jul-2023 11:30:06 UTC] WordPress database error Duplicate key name 'created_at_index' for query ALTER TABLE wp_e_events
+    		ADD INDEX `created_at_index` (`created_at`)
+		 made by require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Elementor\Plugin->init, Elementor\Plugin->init_components, Elementor\Core\Admin\Admin->__construct, Elementor\Plugin->init_common, Elementor\Core\Common\App->init_components, Elementor\Core\Common\Modules\EventTracker\Module->__construct, Elementor\Core\Common\Modules\EventTracker\DB->__construct, Elementor\Core\Common\Modules\EventTracker\DB->add_indexes
+[13-Jul-2023 11:30:41 UTC] WordPress database error Table 'wp_actionscheduler_actions' already exists for query CREATE TABLE wp_actionscheduler_actions (
+				        action_id bigint(20) unsigned NOT NULL auto_increment,
+				        hook varchar(191) NOT NULL,
+				        status varchar(20) NOT NULL,
+				        scheduled_date_gmt datetime NULL default '0000-00-00 00:00:00',
+				        scheduled_date_local datetime NULL default '0000-00-00 00:00:00',
+				        args varchar(191),
+				        schedule longtext,
+				        group_id bigint(20) unsigned NOT NULL default '0',
+				        attempts int(11) NOT NULL default '0',
+				        last_attempt_gmt datetime NULL default '0000-00-00 00:00:00',
+				        last_attempt_local datetime NULL default '0000-00-00 00:00:00',
+				        claim_id bigint(20) unsigned NOT NULL default '0',
+				        extended_args varchar(8000) DEFAULT NULL,
+				        PRIMARY KEY  (action_id),
+				        KEY hook (hook(191)),
+				        KEY status (status),
+				        KEY scheduled_date_gmt (scheduled_date_gmt),
+				        KEY args (args(191)),
+				        KEY group_id (group_id),
+				        KEY last_attempt_gmt (last_attempt_gmt),
+				        KEY `claim_id_status_scheduled_date_gmt` (`claim_id`, `status`, `scheduled_date_gmt`)
+				        ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by do_action('wp_ajax_owp_ajax_required_plugins_activate'), WP_Hook->do_action, WP_Hook->apply_filters, OceanWP_Demos->ajax_required_plugins_activate, activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wpforms-lite/wpforms.php'), wpforms, WPForms\WPForms::instance, WPForms\WPForms->includes, WPForms\WPForms->includes_magic, require_once('/plugins/wpforms-lite/vendor/woocommerce/action-scheduler/action-scheduler.php'), action_scheduler_initialize_3_dot_4_dot_0, ActionScheduler::init, ActionScheduler_HybridStore->init, ActionScheduler_DBStore->init, ActionScheduler_Abstract_Schema->register_tables, ActionScheduler_Abstract_Schema->update_table, dbDelta
+[13-Jul-2023 11:30:41 UTC] WordPress database error Duplicate entry '587' for key 'PRIMARY' for query INSERT INTO `wp_actionscheduler_actions` (`action_id`, `hook`, `status`, `scheduled_date_gmt`, `scheduled_date_local`, `last_attempt_gmt`, `last_attempt_local`) VALUES ('587', '', '', '2023-07-14 00:00:00', '2023-07-14 00:00:00', '2023-07-14 00:00:00', '2023-07-14 00:00:00') made by do_action('wp_ajax_owp_ajax_required_plugins_activate'), WP_Hook->do_action, WP_Hook->apply_filters, OceanWP_Demos->ajax_required_plugins_activate, activate_plugin, plugin_sandbox_scrape, include_once('/plugins/wpforms-lite/wpforms.php'), wpforms, WPForms\WPForms::instance, WPForms\WPForms->includes, WPForms\WPForms->includes_magic, require_once('/plugins/wpforms-lite/vendor/woocommerce/action-scheduler/action-scheduler.php'), action_scheduler_initialize_3_dot_4_dot_0, ActionScheduler::init, ActionScheduler_HybridStore->init, ActionScheduler_DBStore->init, ActionScheduler_Abstract_Schema->register_tables, ActionScheduler_Abstract_Schema->update_table, do_action('action_scheduler/created_table'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_HybridStore->set_autoincrement
+[13-Jul-2023 11:42:36 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 11:42:36 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 11:42:36 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[13-Jul-2023 11:48:04 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 11:48:04 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:41:21 UTC] Erreur d’événement de replanification de tâche pour le crochet action_scheduler_run_queue. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[13-Jul-2023 12:42:58 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 12:42:58 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:42:58 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[13-Jul-2023 12:43:02 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 12:43:02 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:43:02 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[13-Jul-2023 12:50:13 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 12:50:13 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:50:14 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[13-Jul-2023 12:50:33 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 12:50:33 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:50:34 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[13-Jul-2023 12:50:39 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 12:50:39 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:50:39 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[13-Jul-2023 12:50:57 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[13-Jul-2023 12:50:57 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[13-Jul-2023 12:50:57 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[14-Jul-2023 03:32:11 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[14-Jul-2023 03:32:11 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[14-Jul-2023 03:32:11 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[14-Jul-2023 03:34:24 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
+[14-Jul-2023 03:34:24 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
+[14-Jul-2023 03:34:24 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
