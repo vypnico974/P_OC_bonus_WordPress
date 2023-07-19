@@ -70,3 +70,12 @@ Stack trace:
 [14-Jul-2023 03:34:24 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1742
 [14-Jul-2023 03:34:24 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\base\document.php on line 1751
 [14-Jul-2023 03:34:24 UTC] PHP Warning:  Attempt to read property "post_status" on null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\elementor\core\kits\manager.php on line 280
+[18-Jul-2023 11:32:51 UTC] PHP Warning:  Undefined array key "google-plus" in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:32:51 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:32:51 UTC] PHP Warning:  Undefined array key "vimeo-square" in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:32:51 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:33:34 UTC] Erreur d’événement de replanification de tâche pour le crochet action_scheduler_run_queue. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[18-Jul-2023 11:49:19 UTC] PHP Warning:  Undefined array key "google-plus" in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:49:19 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:49:19 UTC] PHP Warning:  Undefined array key "vimeo-square" in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
+[18-Jul-2023 11:49:19 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\HP\Local Sites\bananasite\app\public\wp-content\plugins\ocean-extra\includes\widgets\social.php on line 543
